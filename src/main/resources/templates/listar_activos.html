@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Activos Fijos</title>
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold text-center mb-8">
+        Lista de Activos Fijos
+      </h1>
+      <div>
+      <!-- Buscador -->
+      <div class="flex justify-between items-center mb-4">
+        <form class="flex" th:action="@{/activos/buscar}" method="get">
+          <input
+            type="text"
+            name="query"
+            placeholder="código o nombres..."
+            class="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Buscar
+          </button>
+        </form>
+
+        <!-- Botón para redirigir a la creación de un nuevo activo fijo -->
+        <a
+          href="#"
+          th:href="@{/activos/crear}"
+          class="bg-green-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+        >
+          Crear Nuevo Activo
+        </a>
+      </div>
+      <div class="overflow-x-auto">
+        <table
+          class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg"
+        >
+          <thead>
+            <tr
+              class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
+            >
+              <th class="py-3 px-6 text-left">Código</th>
+              <th class="py-3 px-6 text-left">Nombres</th>
+              <th class="py-3 px-6 text-left">Precio</th>
+              <th class="py-3 px-6 text-left">Marca</th>
+              <th class="py-3 px-6 text-left">Modelo</th>
+              <th class="py-3 px-6 text-left">Año</th>
+              <th class="py-3 px-6 text-left">Color</th>
+              <th class="py-3 px-6 text-left">Ubicación</th>
+              <th class="py-3 px-6 text-left"></th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700 text-sm font-light">
+            <tr
+              th:each="activo : ${activos}"
+              class="border-b border-gray-200 hover:bg-gray-100"
+            >
+              <td
+                class="py-3 px-6 text-left whitespace-nowrap"
+                th:text="${activo.codigo}"
+              ></td>
+              <td class="py-3 px-6 text-left" th:text="${activo.nombres}"></td>
+              <td class="py-3 px-6 text-left" th:text="${activo.precio}"></td>
+              <td class="py-3 px-6 text-left" th:text="${activo.marca}"></td>
+              <td class="py-3 px-6 text-left" th:text="${activo.modelo}"></td>
+              <td class="py-3 px-6 text-left" th:text="${activo.año}"></td>
+              <td class="py-3 px-6 text-left" th:text="${activo.color}"></td>
+              <td
+                class="py-3 px-6 text-left"
+                th:text="${activo.ubicacion}"
+              ></td>
+              <td class="py-3 px-4 text-center flex space-x-4 justify-center">
+                <!-- Botón Editar -->
+                <a
+                  th:href="@{/activos/editar/{id}(id=${activo.codigo})}"
+                  class="bg-blue-500 text-white px-3 py-1 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  Editar
+                </a>
+
+                <!-- Botón Eliminar -->
+                <form
+                  th:action="@{/activos/eliminar/{id}(id=${activo.codigo})}"
+                  method="post"
+                >
+                  <button
+                    type="submit"
+                    class="bg-red-500 text-white px-3 py-1 rounded-md shadow-sm hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                  >
+                    Eliminar
+                  </button>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
