@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-11" value="ActivoFijo" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="140" y="500" width="160" height="202" as="geometry" />
+          <mxGeometry x="90" y="510" width="160" height="202" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-12" value="- codigo: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vYCF20Jfa3Jo7s7xmPMY-11">
           <mxGeometry y="26" width="160" height="24" as="geometry" />
@@ -32,7 +32,7 @@
           <mxGeometry y="194" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-16" value="ActivoBuilder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="100" y="150" width="260" height="280" as="geometry" />
+          <mxGeometry x="70" y="150" width="260" height="280" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-17" value="- activoFijo: ActivoFijo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vYCF20Jfa3Jo7s7xmPMY-16">
           <mxGeometry y="26" width="260" height="26" as="geometry" />
@@ -65,7 +65,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-49" value="ActivoFijoController" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="650" y="210" width="160" height="106" as="geometry" />
+          <mxGeometry x="600" y="190" width="160" height="106" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-50" value="- Listar: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vYCF20Jfa3Jo7s7xmPMY-49">
           <mxGeometry y="26" width="160" height="24" as="geometry" />
@@ -80,7 +80,7 @@
           <mxGeometry y="98" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-54" value="Vista" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="620" y="540" width="160" height="106" as="geometry" />
+          <mxGeometry x="630" y="510" width="160" height="106" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-55" value="- Listar: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vYCF20Jfa3Jo7s7xmPMY-54">
           <mxGeometry y="26" width="160" height="24" as="geometry" />
@@ -95,7 +95,7 @@
           <mxGeometry y="98" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-59" value="ActivoFijoService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="410" y="370" width="160" height="106" as="geometry" />
+          <mxGeometry x="430" y="370" width="160" height="106" as="geometry" />
         </mxCell>
         <mxCell id="vYCF20Jfa3Jo7s7xmPMY-60" value="- Listar: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vYCF20Jfa3Jo7s7xmPMY-59">
           <mxGeometry y="26" width="160" height="24" as="geometry" />
